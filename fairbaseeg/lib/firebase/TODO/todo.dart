@@ -22,7 +22,7 @@ class _todolistState extends State<todofirebase> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("To do list"),
+        title: Text("Crud Operations"),
       ),
       body: StreamBuilder<QuerySnapshot>(
           stream: readUser(),

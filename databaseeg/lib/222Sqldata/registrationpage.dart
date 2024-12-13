@@ -1,9 +1,11 @@
-import 'package:datbasesql/222Sqldata/SQLHEPPP.dart';
-import 'package:datbasesql/222Sqldata/loginpage.dart';
+// import 'package:datbasesql/222Sqldata/SQLHEPPP.dart';
+// import 'package:datbasesql/222Sqldata/loginpage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'SQLHEPPP.dart';
 import 'homepage.dart';
+import 'loginpage.dart';
 
 class registrationpage11 extends StatefulWidget {
   const registrationpage11({Key? key}) : super(key: key);

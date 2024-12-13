@@ -1,9 +1,11 @@
-import 'package:datbasesql/hive/LOGIN/homehive.dart';
-import 'package:datbasesql/hive/LOGIN/registrationhive.dart';
+
+import 'package:databaseeg/hive/LOGIN/registrationhive.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
+
+import 'homehive.dart';
 
 
 class loginhive extends StatefulWidget {

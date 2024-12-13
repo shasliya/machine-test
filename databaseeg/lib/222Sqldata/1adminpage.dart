@@ -1,6 +1,8 @@
-import 'package:datbasesql/222Sqldata/SQLHEPPP.dart';
+//import 'package:datbasesql/222Sqldata/SQLHEPPP.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'SQLHEPPP.dart';
 
 class firstadmin extends StatefulWidget {
   const firstadmin({Key? key}) : super(key: key);

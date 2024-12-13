@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'package:datbasesql/222Sqldata/SQLHEPPP.dart';
-import 'package:datbasesql/222Sqldata/registrationpage.dart';
+import 'package:databaseeg/222Sqldata/registrationpage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '1adminpage.dart';
+import 'SQLHEPPP.dart';
 import 'homepage.dart';
 
 class loginpage extends StatefulWidget {
@@ -26,7 +26,7 @@ class _loginpageState extends State<loginpage> {
       List<Map> data = await sqlhlpp.checklogin(email, password);
       return data;
     }
-    void checkuser();
+    void checkuser;();
     return Scaffold(
       body: Container(
         child: Form(
@@ -163,5 +163,7 @@ class _loginpageState extends State<loginpage> {
     ,
     );
   }
+
+  checklogin(String text, String text2) {}
 }
 

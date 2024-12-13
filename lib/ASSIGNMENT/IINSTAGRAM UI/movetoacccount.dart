@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class instalogin extends StatefulWidget {
-  const instalogin({super.key});
+class moveaccount extends StatefulWidget {
+  const moveaccount({super.key});
 
   @override
-  State<instalogin> createState() => _instaloginState();
+  State<moveaccount> createState() => _instaloginState();
 }
 
-class _instaloginState extends State<instalogin> {
+class _instaloginState extends State<moveaccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

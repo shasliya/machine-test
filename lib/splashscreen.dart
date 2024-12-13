@@ -26,6 +26,7 @@ class _SplashscreenState extends State<Splashscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        color: Colors.blue,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage("assets/images/bg2.jpg"),

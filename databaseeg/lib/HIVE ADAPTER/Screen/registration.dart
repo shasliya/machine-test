@@ -1,11 +1,13 @@
 //import 'package:email_validator/email_validator.dart';
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'Emailvalidator.dart';
-void main(){
-  runApp(GetMaterialApp(home: Rgpg(),));
-}
+import '../Database/database.dart';
+import '../Model/Usermodel.dart';
+//
+// void main(){
+//   runApp(GetMaterialApp(home: Rgpg(),));
+// }
 class Rgpg extends StatelessWidget {
   TextEditingController username=TextEditingController();
   TextEditingController password=TextEditingController();
@@ -92,27 +94,41 @@ class Rgpg extends StatelessWidget {
     final pass = password.text.trim();
     final cpass = cpassword.text.trim();
 
-    final emailValidationResult = emailvalidator.validate(email);
-    if (email !=''&& pass !=''&& cpass!=''){
+    final emailValidationResult = EmailValidator.validate(email);
+    if (email !='' && pass !=''&& cpass!=''){
       if(emailValidationResult == true){
         final passValidationResult = checkPassword(pass, cpass);
         {
           if(passValidationResult==true)
             {
-              
+              final user = User(email: email, password:pass);
+              await DBfunction.instance.userSignUp(user);
+              Get.back();
+              Get.snackbar("Success", "account created");
+            }
             }
         }
+      else{
+        Get.snackbar("error","Provide a valid email");
+      }
       }
       else{
         Get.snackbar('error','provide a validate email');
       }
     }
-    else{
 
+  bool checkPassword(String pass, String cpass){
+    if(pass == cpass){
+      if(pass.length<6){
+        Get.snackbar("error", "password length should be 6");
+        return false;
+      }else{
+        return true;
+      }
+    }else{
+      Get.snackbar("error", "password mismatch");
+      return false;
     }
   }
-  bool checkPassword(String pass,String cpass)
-  {
-    return true;
-  }
+
 }
